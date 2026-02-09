@@ -123,16 +123,62 @@ public class TableGenerator {
 	 */
 	
 	public String[] generarTabla(int numero) {
-		//
+		
+		//Este es un contenedor de tipo STRING
+		//de nombre tablaGenerda y contendra 10 Strings reservadoss en memoria 
 		String[] tablaGenerada = new String[10];
 		
+		//Recordando cosas de JAVA 
+		
+		/*
+		 * Tenemso datos simples
+		 * 
+		 * String variable = "German"
+		 * 
+		 * Se guarda un solo valor
+		 * 
+		 * 
+		 * 
+		 * Arreglos unidimensionales
+		 * 
+		 * String[] variable =  new String [2]
+		 * 
+		 * Es una lista o fila de textos
+		 * Sirven para colecciones de datos del mismo tipo 
+		 * ejem 10 lineas de tablas
+		 * 
+		 * 
+		 * Arreglo bidimensional Matriz
+		 * 
+		 * String [][] variable = new String [5][7]
+		 * 
+		 * Tabla con filas y columnas
+		 * 
+		 * 
+		 * 
+		 * Se puede hacer con float int , etc.
+		 * 
+		 * int, int[], int[][]
+		 * String[],string
+		 * 
+		 * 
+		 * Este no se puede hacer errelos o matrices
+		 * void
+		 */
+		
+		//************************************
+		
+		//ahora declaramos un ciclo
 		
 		for(int i = 1; i<=10; i++) {
 			tablaGenerada[i-1]=i+" x "+numero+" = "+(i * numero);
 		}
 		
-		return tablaGenerada;
+		//Al ser un arreglo, recorremos el arreglo y bamos enlazando para ir formando la tabla
+		//Se toma el numero y se va haciendo las multiplicaciones
 		
+		//Regresamos el arreglo
+		return tablaGenerada;
 	}
 	
 	//Generar n Tablas
