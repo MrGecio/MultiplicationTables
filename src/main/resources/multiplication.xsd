@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://itq.edu/multiplication" 
+xmlns:tns="http://itq.edu/multiplication" 
+elementFormDefault="qualified">
+
+
+	<element name="Request">
+		<complexType>
+			<sequence>
+				<element name="numero" type="double"/>
+			</sequence>		
+		</complexType>
+	</element>
+	
+	
+	
+	<element name="Response">
+		<complexType>
+			<sequence>
+				<element name="tabla">
+					<complexType>
+						<sequence>
+							<element name="Multiplicacion" type="tns:Multiplicacion" 
+							minOccurs="10" maxOccurs="10"/>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>		
+		</complexType>
+	</element>
+	
+	
+	
+	<complexType name="Multiplicacion">
+		<sequence>
+			<element name="operando1" type="double"/>
+			<element name="operando2" type="double"/>
+			<element name="resultado" type="double"/>
+		</sequence>
+	</complexType>
+</schema>

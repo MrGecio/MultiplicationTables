@@ -182,10 +182,46 @@ public class TableGenerator {
 	}
 	
 	//Generar n Tablas
-	public String[][] generarTablas(int numero) {
-		String[][]tablasGeneradas = null;
-		return tablasGeneradas;
+	public String[][] generarTablas(int ... numeros) {
+		
+		
+		//														VARIANT
+		//int ... numeros 
+		/*
+		 * 
+		 * significa que java recibira n cantidad de numeros java lo tratara como un arreglo de numero int[]
+		 * 
+		 */
+		
+		String[][] tablas =  new String[numeros.length][];
+		
+		/*
+		 * Se declara una matriz de numeros y el numero de tablas que se generaran sera del tamaño del arreglo de numeros
+		 * El segundo corchete vacio indica que la fila de la matriz sera un arreglo tambnien
+		 * 
+		 */
+		
+		int index = 0;
+		
+		//esto es un for each para cada numero en el arreglo de numeros 
+		// y ya se ejecuta el ciclo pasando por cada uno
+		for(int numero : numeros) {
+			
+			//Aqui se reusa el metodo anterior que pues ya funciona 
+			String[] tabla = generarTabla(numero);
+			//luego se va lleando por renglon completo con el uso del indice y el uso del metodo anterior 
+			tablas[index++]= tabla;
+			
+			
+		}
+		//Llenada la matriz se regresa completo
+		return tablas;
 	}
+	
+	
+	//Ahora yo poseo dos metodos que me permiten generar tablas de multplicaion se usaran para crear servicios por medio de un contrato
+	
+	
 	
 	
 	

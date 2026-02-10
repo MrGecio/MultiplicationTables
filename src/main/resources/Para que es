@@ -1,0 +1,25 @@
+Aqui va todo los que pueda poner pero no debo de poner codigo ya que no se compilara 
+
+mandar elmentos:
+
+Plain text
+Request|7
+
+xml:
+
+<Request>
+	<numero>7</numero>
+</Request>
+
+json
+{
+
+	"numero":7
+
+}
+
+
+yaml
+
+Request 
+	numero: 7
